@@ -70,6 +70,14 @@ nav a.cta{
       color:var(--flag-white);
       box-shadow: 0 8px 24px rgba(206,17,38,0.12);
     }
+nav a.cta2 {
+  background: var(--flag-white);
+  color: var(--flag-red);
+  border: 2px solid var(--flag-red);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 700;
+}
 	
 .content{
       border-radius:16px;
