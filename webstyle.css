@@ -12,7 +12,12 @@
       --text: #111213;
     }
 	
-.container{ max-width:1100px; margin:0 auto; padding: 0 16px; /* add horizontal padding for small screens */ }
+.container{ 
+	  max-width:1100px; 
+	  margin:0 auto; 
+	  padding: 0 16px; /* add horizontal padding for small screens */ 
+	  width: 100%; /* ensure it never overflows */
+	}
 
 body{
       margin:0;
@@ -200,9 +205,19 @@ footer{
 
 /* Phone Responsive Web */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 8px;
+    align-items: stretch; /* make buttons fill width */
+  }
+  nav a { padding: 10px;text-align: center; }
   .content { grid-template-columns: 1fr; /* stack left and right */ gap: 12px;}
   .content .right { order: -1; /* optional: image on top */ }
-  .content .left { padding: 16px; /* reduce inner padding */ }
+  .content .left { padding: 12px; /* reduce inner padding */ }
+  .content h1 { font-size: 24px; /* smaller heading */ }
+  .content p.lead { font-size: 14px; /* smaller paragraph */ }
+  .search input { font-size: 14px; padding: 10px; }
+  .search button { padding: 10px; }
   /* Make recipe cards stack on smaller screens */
   .grid {
     grid-template-columns: 1fr; /* single column for mobile */
