@@ -203,28 +203,81 @@ footer{
   }
 }
 
-/* Phone Responsive Web */
+/* Mobile Responsive Web */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* stack buttons vertically */
-    gap: 8px;
-    align-items: stretch; /* make buttons fill width */
-  }
-  nav a { padding: 10px;text-align: center; }
-  .content { grid-template-columns: 1fr; /* stack left and right */ gap: 12px;}
-  .content .right { order: -1; /* optional: image on top */ }
-  .content .left { padding: 12px; /* reduce inner padding */ }
-  .content h1 { font-size: 24px; /* smaller heading */ }
-  .content p.lead { font-size: 14px; /* smaller paragraph */ }
-  .search input { font-size: 14px; padding: 10px; }
-  .search button { padding: 10px; }
-  /* Make recipe cards stack on smaller screens */
-  .grid {
-    grid-template-columns: 1fr; /* single column for mobile */
-    gap: 12px; /* slightly smaller gap for mobile */
-  }
+
+  /* Body padding for mobile */
   body {
-    padding: 12px; /* reduce overall body padding */
+    padding: 12px;
+  }
+
+  /* Container adjustments */
+  .container {
+    width: 100%;
+    padding: 0 12px; /* horizontal padding */
+  }
+
+  /* Content grid stacking */
+  .content {
+    display: grid;
+    grid-template-columns: 1fr; /* stack left and right */
+    gap: 12px;
+  }
+
+  /* Right image on top */
+  .content .right {
+    order: -1;
+  }
+
+  /* Left content adjustments */
+  .content .left {
+    padding: 12px;
+  }
+  .content h1 {
+    font-size: 22px;
+  }
+  .content p.lead {
+    font-size: 14px;
+  }
+
+  /* Search bar adjustments */
+  .search {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .search input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .search button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Navigation adjustments */
+  nav {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch; /* make links full width */
+  }
+  nav a {
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Categories adjustments */
+  .categories {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 16px 0;
+  }
+
+  /* Recipe cards stacking */
+  .grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 12px;
   }
 }
 
