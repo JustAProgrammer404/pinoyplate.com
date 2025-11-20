@@ -203,35 +203,38 @@ footer{
   }
 }
 
-/* Mobile Optimized Web */
+/* Mobile Responsive Web */
 @media (max-width: 768px) {
 
-  /* Body and container padding */
+  /* Body padding for mobile */
   body {
     padding: 12px;
   }
+
+  /* Container adjustments */
   .container {
     width: 100%;
-    padding: 0 12px;
+    padding: 0 12px; /* horizontal padding */
   }
 
-  /* Content stacking */
+  /* Content grid stacking */
   .content {
     display: grid;
-    grid-template-columns: 1fr; /* stack left & right */
+    grid-template-columns: 1fr; /* stack left and right */
     gap: 12px;
   }
 
   /* Right image on top */
   .content .right {
     order: -1;
-    width: 100%;
+	width: 100%;
   }
+  
   .content .right img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 12px;
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	margin-bottom: 12px;
   }
 
   /* Left content adjustments */
@@ -240,11 +243,11 @@ footer{
   }
   .content h1 {
     font-size: 22px;
-    line-height: 1.2;
+	line-height: 1.2;
   }
   .content p.lead {
     font-size: 14px;
-    line-height: 1.4;
+	line-height: 1.4;
   }
 
   /* Search bar adjustments */
@@ -252,7 +255,12 @@ footer{
     flex-direction: column;
     gap: 8px;
   }
-  .search input, .search button {
+  .search input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .search button {
     width: 100%;
     font-size: 14px;
     padding: 10px;
@@ -262,15 +270,13 @@ footer{
   nav {
     flex-direction: column;
     gap: 8px;
-    align-items: stretch; /* full width links */
-    margin-bottom: 12px;
+    align-items: stretch; /* make links full width */
   }
   nav a {
     text-align: center;
-    width: 100%;
+	width: 100%;
     padding: 12px 0;
-    border-radius: 8px;
-    font-size: 14px;
+	border-radius: 8px;
   }
 
   /* Categories adjustments */
@@ -279,26 +285,11 @@ footer{
     gap: 8px;
     margin: 12px 0 16px 0;
   }
-  .cat {
-    flex: 1 1 auto; /* let categories shrink */
-    text-align: center;
-    font-size: 13px;
-    padding: 8px 10px;
-  }
 
   /* Recipe cards stacking */
   .grid {
     grid-template-columns: 1fr; /* 1 card per row */
     gap: 12px;
-  }
-  .card .media {
-    height: 180px; /* slightly taller image for mobile */
-  }
-
-  /* Footer adjustments */
-  footer {
-    font-size: 13px;
-    text-align: center;
   }
 }
 
