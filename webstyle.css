@@ -227,6 +227,14 @@ footer{
   /* Right image on top */
   .content .right {
     order: -1;
+	width: 100%;
+  }
+  
+  .content .right img {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	margin-bottom: 12px;
   }
 
   /* Left content adjustments */
@@ -235,9 +243,11 @@ footer{
   }
   .content h1 {
     font-size: 22px;
+	line-height: 1.2;
   }
   .content p.lead {
     font-size: 14px;
+	line-height: 1.4;
   }
 
   /* Search bar adjustments */
@@ -264,7 +274,9 @@ footer{
   }
   nav a {
     text-align: center;
-    padding: 10px;
+	width: 100%;
+    padding: 12px 0;
+	border-radius: 8px;
   }
 
   /* Categories adjustments */
@@ -278,6 +290,12 @@ footer{
   .grid {
     grid-template-columns: 1fr; /* 1 card per row */
     gap: 12px;
+  }
+  
+  /* Footer adjustments */
+  footer {
+    font-size: 13px;
+    text-align: center;
   }
 }
 
