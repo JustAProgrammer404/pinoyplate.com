@@ -12,7 +12,7 @@
       --text: #111213;
     }
 	
-.container{ max-width:1100px; margin:0 auto; }
+.container{ max-width:1100px; margin:0 auto; padding: 0 16px; /* add horizontal padding for small screens */ }
 
 body{
       margin:0;
@@ -83,7 +83,7 @@ nav a.cta2 {
       border-radius:16px;
       overflow:hidden;
       display:grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr minmax(0, 1fr);
       gap:18px;
       box-shadow:var(--shadow);
       margin-bottom:20px;
@@ -200,16 +200,16 @@ footer{
 
 /* Phone Responsive Web */
 @media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr; /* stack left and right */
-  }
-  .content .right {
-    order: -1; /* optional: image on top */
-  }
+  .content { grid-template-columns: 1fr; /* stack left and right */ gap: 12px;}
+  .content .right { order: -1; /* optional: image on top */ }
+  .content .left { padding: 16px; /* reduce inner padding */ }
   /* Make recipe cards stack on smaller screens */
   .grid {
     grid-template-columns: 1fr; /* single column for mobile */
     gap: 12px; /* slightly smaller gap for mobile */
+  }
+  body {
+    padding: 12px; /* reduce overall body padding */
   }
 }
 
