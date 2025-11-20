@@ -83,7 +83,7 @@ nav a.cta2 {
       border-radius:16px;
       overflow:hidden;
       display:grid;
-      grid-template-columns: 1fr 480px;
+      grid-template-columns: 1fr auto;
       gap:18px;
       box-shadow:var(--shadow);
       margin-bottom:20px;
@@ -99,6 +99,13 @@ nav a.cta2 {
       color:var(--flag-blue);
     }
 .content p.lead{ margin:0 0 18px 0; color:#333; }
+.content .right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
 
 .tag{
       display:inline-block;
@@ -181,3 +188,28 @@ footer{
     color:#6b6f76;
     font-size:14px;
     }
+
+
+/* Tablet Responsive recipe cards */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+    gap: 16px;
+  }
+}
+
+/* Phone Responsive Web */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* stack left and right */
+  }
+  .content .right {
+    order: -1; /* optional: image on top */
+  }
+  /* Make recipe cards stack on smaller screens */
+  .grid {
+    grid-template-columns: 1fr; /* single column for mobile */
+    gap: 12px; /* slightly smaller gap for mobile */
+  }
+}
+
