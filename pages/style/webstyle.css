@@ -84,6 +84,14 @@ nav a.cta2 {
   padding: 10px 12px;
   font-weight: 700;
 }
+
+.hm {
+    display: none;
+	font-size: 28px;
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
 	
 .content{
       border-radius:16px;
@@ -212,8 +220,8 @@ footer{
     padding: 12px;
   }
   
-  .hamburger {
-    display: block;
+  .hm {
+	display: block;
   }
 
   nav {
