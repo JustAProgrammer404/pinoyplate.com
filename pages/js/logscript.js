@@ -1,3 +1,8 @@
+// To toggle the hamburger menu and diplay the buttons
+document.getElementById("hmbtn").addEventListener("click", () => {
+  document.querySelector("nav").classList.toggle("show");
+});
+
 // Mock "database" for demo purposes
 const usersDB = [
   { email: 'test@example.com', password: '123456' }
