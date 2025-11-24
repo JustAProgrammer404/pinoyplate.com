@@ -20,31 +20,33 @@
 			  <div class="subtitle">Sarap ng Bayan</div>
 			</div> 
 		  </a>
-		  
-		  <nav aria-label="Main Navigation">
-			<a href="homepage.html">Home</a>
-			<a href="ctgs.html">Categories</a>
-			<a href="sin.html" class="cta">Sign up</a>
-			<a href="log.html" class="cta2">Log in</a>
+
+		  <!-- Desktop Nav — stays visible -->
+		  <nav class="main-nav" aria-label="Main Navigation">
+			<a href="homepage.html" class="nlink">Home</a>
+			<a href="ctgs.html" class="nlink">Categories</a>
+			<a href="sin.html" class="cta nlink">Sign up</a>
+			<a href="log.html" class="cta2 nlink">Log in</a>
 		  </nav>
-		  
-		  <!-- for the hamburger menu on phone -->
-		  <div class="off-screen-menu">
-			<ul>
-			  <li><a class=cta3 href="homepage.html">Home</a></li>
-			  <li><a class=cta3  href="ctgs.html">Categories</a></li>
-			  <li><a class=cta3  href="sin.html" class="cta">Sign up</a></li>
-			  <li><a class=cta3  href="log.html" class="cta2">Log in</a></li>
-			</ul>
+
+		  <!-- Hamburger (mobile only) -->
+		  <div class="ham-menu">
+			<span></span>
+			<span></span>
+			<span></span>
 		  </div>
-		  
-		  <nav>
-			<div class="ham-menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-		  </nav>
+		</header>
+
+		<!-- Mobile Slide Menu -->
+		<nav class="mobile-nav">
+		  <a href="homepage.html" class="nlink">Home</a>
+		  <a href="ctgs.html" class="nlink">Categories</a>
+		  <a href="sin.html" class="cta nlink">Sign up</a>
+		  <a href="log.html" class="cta2 nlink">Log in</a>
+		</nav>
+
+		<!-- Overlay -->
+		<div class="menu-overlay"></div>
 		</header>
 		
 		<main>
