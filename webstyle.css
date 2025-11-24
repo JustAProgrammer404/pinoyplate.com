@@ -1,3 +1,4 @@
+/* HOMEPAGE */
 :root{
       /* Philippine flag colors */
       --flag-blue: #0038A8;
@@ -210,6 +211,34 @@ footer{
   body {
     padding: 12px;
   }
+  
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--card-bg);
+    position: absolute;
+    top: 70px;
+    right: 12px;
+    width: 180px;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 999;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
 
   /* Container adjustments */
   .container {
@@ -298,4 +327,125 @@ footer{
     text-align: center;
   }
 }
+/* HOMEPAGE */
+
+/* LOGIN */
+.login-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 670px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: var(--flag-blue);
+  box-shadow: 0 0 0 3px rgba(0, 56, 168, 0.1);
+}
+
+.login-form .remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #556;
+  gap: 6px;
+}
+
+.login-form .remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.login-form .cta2 {
+  border: 2px solid var(--flag-red);
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  background: var(--flag-white);
+  color: var(--flag-red);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.login-form .cta2:hover {
+  background: var(--flag-red);
+  color: var(--flag-white);
+  box-shadow: 0 6px 18px rgba(206,17,38,0.12);
+}
+/* LOGIN */
+
+
+/* SIGN-UP */
+.signUp-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 670px;
+}
+
+.signUp-form input[type="text"],
+.signUp-form input[type="email"],
+.signUp-form input[type="password"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.signUp-form input[type="text"]:focus,
+.signUp-form input[type="email"]:focus,
+.signUp-form input[type="password"]:focus {
+  border-color: var(--flag-blue);
+  box-shadow: 0 0 0 3px rgba(0, 56, 168, 0.1);
+}
+
+.signUp-form .remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #556;
+  gap: 6px;
+}
+
+.signUp-form .remember-me input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.signUp-form .cta {
+  border: 2px solid var(--flag-red);
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  background: var(--flag-red);
+  color: var(--flag-white);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.signUp-form .cta:hover {
+  background: var(--flag-white);
+  color: var(--flag-red);
+  box-shadow: 0 6px 18px rgba(206,17,38,0.12);
+}
+/* SIGN-UP */
+
 
