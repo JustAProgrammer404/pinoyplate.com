@@ -85,13 +85,21 @@ nav a.cta2 {
   font-weight: 700;
 }
 
+/* HAMBURGER BUTTON - default hidden */
 .hm {
     display: none;
-	font-size: 28px;
-	background: none;
-	border: none;
-	cursor: pointer;
-  }
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* NAVIGATION - default visible on desktop */
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 	
 .content{
       border-radius:16px;
@@ -219,11 +227,11 @@ footer{
   body {
     padding: 12px;
   }
-  
+    /* Show hamburger on mobile */
   .hm {
 	display: block;
   }
-
+  /* Hide nav by default */
   nav {
     display: none;
     flex-direction: column;
@@ -237,15 +245,16 @@ footer{
     box-shadow: var(--shadow);
     z-index: 999;
   }
-
+/* Show nav when toggled */
   nav.show {
     display: flex;
   }
-
+/* Mobile nav links full width */
   nav a {
-    padding: 10px;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 8px;
   }
 
   /* Container adjustments */
