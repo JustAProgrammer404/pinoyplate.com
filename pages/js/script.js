@@ -1,10 +1,27 @@
 // To toggle the hamburger menu and diplay the buttons
-const hamMenu = document.querySelector(".ham-menu");
-const offScreenMenu = document.querySelector(".off-screen-menu");
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("active");
-  offScreenMenu.classList.toggle("active");
+const ham = document.querySelector(".ham-menu");
+const mobileNav = document.querySelector(".mobile-nav");
+const overlay = document.querySelector(".menu-overlay");
+
+ham.addEventListener("click", () => {
+  mobileNav.classList.toggle("active");
+  overlay.classList.toggle("active");
 });
+
+// Close when clicking a menu link
+document.querySelectorAll(".nlink").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+
+// Close when clicking outside
+overlay.addEventListener("click", () => {
+  mobileNav.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
 
 // Mock "database" for demo purposes
 const usersDB = [
