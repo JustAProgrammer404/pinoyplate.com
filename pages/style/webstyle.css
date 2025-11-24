@@ -243,11 +243,6 @@ footer{
   .main-nav {
     display: none;
   }
-  
-  /* Hide desktop nav */
-  .main-nav {
-    display: none;
-  }
 
   /* Show hamburger */
   .ham-menu {
@@ -273,7 +268,7 @@ footer{
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
+    width: 50%;
     height: 100vh;
     background: white;
     display: flex;
@@ -283,6 +278,14 @@ footer{
     gap: 22px;
     transition: right .35s ease;
     z-index: 1000;
+  }
+  
+  /* Mobile nav buttons */
+  .mobile-nav .cta,
+  .mobile-nav .cta2 {
+    width: calc(100% - 24px); /* full width minus padding if needed */
+    margin: 0 12px; /* horizontal spacing */
+    text-align: center; /* center the text */
   }
 
   .mobile-nav.active {
@@ -358,19 +361,6 @@ footer{
     width: 100%;
     font-size: 14px;
     padding: 10px;
-  }
-
-  /* Navigation adjustments */
-  nav {
-    flex-direction: column;
-    gap: 8px;
-    align-items: stretch; /* make links full width */
-  }
-  nav a {
-    text-align: center;
-	width: 100%;
-    padding: 12px 0;
-	border-radius: 8px;
   }
 
   /* Categories adjustments */
@@ -513,4 +503,8 @@ footer{
 }
 /* SIGN-UP */
 
+/* Mobile Responsive for Login and Sign-Up */
+@media (max-width: 565px) {
+	
+}
 
