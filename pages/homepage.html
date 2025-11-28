@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<title> PinoyPlate </title>
+	<link rel="stylesheet" href="style/webstyle.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+		<header>
+		  <a class="logo" href="homepage.html"> 
+			<div class="flag-badge">
+			  <img src="images/flag.png" alt="Philippine Flag">
+			</div>
+			<div>
+			  <div class="title">PinoyPlate</div>
+			  <div class="subtitle">Sarap ng Bayan</div>
+			</div> 
+		  </a>
+
+		  <!-- Desktop Nav — stays visible -->
+		  <nav class="main-nav" >
+			<a href="homepage.html" class="nlink">Home</a>
+			<a href="ctgs.html" class="nlink">Categories</a>
+			<a href="#" id="logoutBtnDesktop" class="cta2 nlink" style="display:none;">Log Out</a>	
+			<a href="sin.html" class="cta nlink">Sign Up</a>
+			<a href="log.html" class="cta2 nlink">Log In</a>
+		  </nav>
+		  
+		  <!-- Profile info on desktop -->
+		  <div id="profileContainer">
+			<span id="profileName"></span>
+			<img id="profilePic" src="images/default-pf.png" alt="Profile Pic" />
+		  </div>
+
+		  <!-- Hamburger (mobile only) -->
+		  <div class="ham-menu">
+			<span></span><span></span><span></span>
+		  </div>
+		</header>
+
+		<!-- Mobile Slide Menu -->
+		<nav class="mobile-nav">
+		
+			<div id="mobileProfileContainer">
+				<span id="mobileProfileName"></span>
+				<img id="mobileProfilePic" src="images/default-pf.png" alt="Profile Pic" />
+			</div>
+		
+		  <a href="homepage.html" class="nlink">Home</a>
+		  <a href="ctgs.html" class="nlink">Categories</a>
+		  <a href="sin.html" class="cta nlink">Sign Up</a>
+		  <a href="log.html" class="cta2 nlink">Log In</a>
+		  <a href="#" id="logoutBtnMobile" class="cta2 nlink">Log Out</a>
+		</nav>
+
+		<!-- Overlay -->
+		<div class="menu-overlay"></div>
+		</header>
+		
+		<main>
+		  <section class="content">
+		  <div class="left">
+		  <div class="tag">Tatak Pinoy</div>
+          <h1>Pinoy Recipes inspired by the Philippine foods.</h1>
+          <p class="lead">Colors guide the UI: blue for trust, red for flavor, yellow for highlights. Try searching or pick a category.</p>
+	
+		  <div class="search" role="search">
+            <input id="search" placeholder="Search recipes, e.g. adobo, sinigang, halo-halo..." />
+            <button id="btnSearch">Search</button>
+          </div>
+          </div>
+		
+			<div class="right">
+			<img src="images/bg.png" alt="background-food">
+			</div>
+		  </section>
+
+		  <div class="categories" aria-label="Recipe Categories">
+			<a class="cat">Ulam</a>
+			<a class="cat">Merienda</a>
+			<a class="cat">Desserts</a>
+			<a class="cat">Snacks</a>
+		  </div>
+		  
+		  <section class="searchResult">
+		    <h2>Search Result</h2>
+			<div class="grid" id="resultSection">
+			  <!-- sample cards -->
+			</div>
+		  </section>
+		  
+		  <section class="popular-rep">
+		    <h2>Popular Recipes</h2>
+			
+			<div class="grid" id="recipeGrid">
+			  <!-- sample cards -->
+			  
+			 <a href="article-pgs/meat/ca.html" class="card-link">
+			  <article class="card" data-title="Chicken Adobo" data-img="images/chicken_adobo.png">
+				<div class="media"><img src="images/chicken_adobo.png" alt="Chicken Adobo"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Chicken Adobo</div>
+					<div class="subtitle">Sarap na ulam — soy & vinegar.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">30–40 min</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.8</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			 
+			 <a href="article-pgs/meat/snb.html" class="card-link">
+			  <article class="card" data-title="Sinigang na Baboy" data-img="images/snb.png">
+				<div class="media"><img src="images/snb.png" alt="Sinigang na Baboy"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Sinigang na Baboy</div>
+					<div class="subtitle">Sour broth with veggies.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">45 min</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.7</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			 
+			 <a href="article-pgs/desserts/hh.html" class="card-link">
+			  <article class="card" data-title="Halo-Halo" data-img="images/hh.png">
+				<div class="media"><img src="images/hh.png" alt="Halo Halo"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Halo-Halo</div>
+					<div class="subtitle">Sweet shaved-ice treat.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">15 min</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.9</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			 
+			 <a href="article-pgs/meat/kk.html" class="card-link">
+			  <article class="card" data-title="Kare-Kare" data-img="images/kk.png">
+				<div class="media"><img src="images/kk.png" alt="Kare-Kare"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Kare-Kare</div>
+					<div class="subtitle">Peanut stew favorite.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">1 hr</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.6</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			 
+			 <a href="article-pgs/nodri/pc.html" class="card-link">
+			  <article class="card" data-title="Pancit Canton" data-img="images/pc.png">
+				<div class="media"><img src="images/pc.png" alt="Pancit Canton"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Pancit Canton</div>
+					<div class="subtitle">Noodles for gatherings.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">25 min</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.5</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			 
+			 <a href="article-pgs/snast/ls.html" class="card-link">
+			  <article class="card" data-title="Lumpiang Shanghai" data-img="images/lps.png">
+				<div class="media"><img src="images/lps.png" alt="Lumpiang Shanghai"></div>
+				<div class="body">
+				  <div>
+					<div class="title">Lumpiang Shanghai</div>
+					<div class="subtitle">Fried spring rolls.</div>
+				  </div>
+				  <div style="margin-top:auto; display:flex; gap:8px; align-items:center; justify-content:space-between;">
+					<div class="badge">30 min</div>
+					<div style="color:var(--flag-red); font-weight:800">★ 4.7</div>
+				  </div>
+				</div>
+			  </article>
+			 </a>
+			</div>
+		  </section>
+			
+			<footer>
+				<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+				  <div>© <strong>PinoyPlate</strong> • Inspired by the Philippine flag</div>
+				  <div style="color:#666">Follow: Facebook • Instagram • TikTok</div>
+				</div>
+			</footer>
+		</main>
+	</div>
+	
+  <script src="js/script.js" defer> </script>
+</body>
+</html>
