@@ -210,14 +210,27 @@ window.addEventListener('DOMContentLoaded', () => {
 // LOG OUT FUNCTION
 
 
+window.addEventListener('DOMContentLoaded', () => {
+  // Hide homepage sections
+  if (document.body.classList.contains("homepage")) {
+    const sections = document.querySelectorAll('.meat, .sea, .veg, .nodri, .sote, .snacks, .desserts');
+    sections.forEach(section => section.style.display = 'none');
+  }
 
+  // Hide search results initially
+  const searchSection = document.querySelector('.searchResult');
+  if (searchSection) searchSection.style.display = 'none';
+});
 
 
 // CATEGORIES SEARCH FUNCTION
 // Get elements
 const searchInput = document.getElementById('search');
 const searchButton = document.getElementById('btnSearch');
-const allCards = document.querySelectorAll('article.card');
+
+// IMPORTANT: select the clickable link, not the article
+const allCards = document.querySelectorAll('a.card-link');
+
 const searchSection = document.querySelector('.searchResult');
 const resultSection = document.getElementById('resultSection');
 
@@ -234,10 +247,11 @@ function filterCards() {
 
   let found = false;
 
-  allCards.forEach(card => {
+  allCards.forEach(link => {
+	const card = link.querySelector('.card');
     const title = card.getAttribute('data-title').toLowerCase();
     if (title.includes(query)) {
-      resultSection.appendChild(card.cloneNode(true));
+      resultSection.innerHTML += link.outerHTML;
       found = true;
     }
   });
